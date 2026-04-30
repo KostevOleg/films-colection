@@ -1,0 +1,27 @@
+<form class="films__search-form  search-form">
+    <label for="name-search"> Search film</label>
+    <input
+      appAutofocus
+      class="search-form__input "
+      name="name-search"
+      type="search"
+      placeholder="search by name"
+      [value]="searchQuery()"
+      (input)="searchChange.emit($any($event.target).value)">
+    <label for="onlyFavorite">Show only favorite</label>
+    <input
+      [checked]="showOnlyFavorites()"
+      (change)="favoriteChange.emit($any($event.target).checked)"
+      type="checkbox"
+      name="onlyFavorite">
+    <label for="genre">Sort by genre</label>
+    <select
+      [value]="selectedGenre()"
+      (change)="genreChange.emit($any($event.target).value)"
+      name="genre">
+      <option value="">All genres</option>
+      @for(genre of genres(); track genre){
+        <option [value]="genre">{{genre}}</option>
+      }
+    </select>
+  </form>

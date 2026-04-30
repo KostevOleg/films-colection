@@ -1,0 +1,37 @@
+.about {
+  padding: 48px 0;
+}
+
+.about__title {
+  margin-bottom: 12px;
+  color: #111827;
+  font-size: 32px;
+}
+
+.about__text {
+  max-width: 680px;
+  margin-bottom: 28px;
+  color: #4b5563;
+  font-size: 17px;
+}
+
+.about__subtitle {
+  margin-bottom: 14px;
+  color: #111827;
+  font-size: 24px;
+}
+
+.about__features {
+  display: grid;
+  gap: 10px;
+  max-width: 760px;
+  padding: 18px 20px;
+  border: 1px solid #d8d2c8;
+  border-radius: 8px;
+  background: #faf7f2;
+  list-style-position: inside;
+}
+
+.about__features li {
+  color: #34312d;
+}

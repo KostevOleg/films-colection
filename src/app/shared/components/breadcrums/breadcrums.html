@@ -1,0 +1,17 @@
+<nav class="breadcrums">
+  <ol class="breadcrums__list">
+    @for(item of breadcrumbs(); track item){
+      <li class="breadcrumbs__item">
+        @if(item.link){
+          <a class="breadcrumbs__link" [routerLink]="item.link">
+                {{ item.label }}
+          </a>
+        } @else {
+          <span class="breadcrumbs__current">
+                {{ item.label }}
+          </span>
+        }
+      </li>
+    }
+  </ol>
+</nav>

@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="header__container container">
+    <a class="header__logo" [routerLink]="['/']" aria-label="FilmApp home">
+      <span class="logo">
+        <span class="logo__film">Film</span><span class="logo__app">App</span>
+      </span>
+    </a>
+
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a class="header__nav-link btn" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link btn" [routerLink]="['/about']">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

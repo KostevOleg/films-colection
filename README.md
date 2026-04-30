@@ -1,59 +1,51 @@
 # RunInto
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+RunInto is a small Angular film catalog application.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Film list from mock data
+- Search films by title
+- Filter by genre and favorite status
+- Add and remove films from favorites
+- Simple pagination with Angular Signals, without URL parameters
+- Film details page
+- Breadcrumb navigation
+- Custom autofocus directive
+- Custom duration pipe
 
-```bash
-ng serve
-```
+## Technologies
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular
+- TypeScript
+- Angular Signals
+- Angular Router
+- SCSS
 
-## Code scaffolding
+## How to Run
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Install dependencies:
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+pnpm install
 
-```bash
-ng generate --help
-```
 
-## Building
+Start the development server:
 
-To build the project run:
 
-```bash
-ng build
-```
+pnpm start
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+Open the app in the browser:
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-```bash
-ng test
-```
+http://localhost:4200
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+## Build
 
-```bash
-ng e2e
-```
+To build the project, run:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+pnpm build
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

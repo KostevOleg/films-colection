@@ -1,0 +1,144 @@
+.film-details {
+  padding: 40px 0;
+}
+
+.film-details__back {
+  margin-bottom: 24px;
+}
+
+.film-details__card {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+  overflow: hidden;
+  border: 1px solid #d8d2c8;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.film-details__poster {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+}
+
+.film-details__info {
+  padding: 32px 32px 32px 0;
+}
+
+.film-details__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.film-details__id {
+  color: #78716c;
+  font-size: 14px;
+}
+
+.film-details__favorite {
+  padding: 6px 12px;
+  border: 1px solid #d8d2c8;
+  border-radius: 8px;
+  background: #faf7f2;
+  color: #34312d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.film-details__favorite--active {
+  border-color: #d6a72f;
+  background: #fff3c4;
+  color: #7c5200;
+}
+
+.film-details__title {
+  margin-bottom: 18px;
+  color: #111827;
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.film-details__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.film-details__facts span {
+  padding: 7px 12px;
+  border: 1px solid #d8d2c8;
+  border-radius: 8px;
+  background: #faf7f2;
+  color: #34312d;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.film-details__description {
+  margin-bottom: 28px;
+  color: #34312d;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.film-details__fields {
+  display: grid;
+  gap: 10px;
+  padding-top: 24px;
+  border-top: 1px solid #ede7de;
+}
+
+.film-details__fields p {
+  color: #57534e;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.film-details__fields span {
+  color: #111827;
+  font-weight: 700;
+}
+
+.film-details--empty {
+  padding: 56px 0;
+}
+
+.film-details--empty h1 {
+  margin-bottom: 10px;
+  color: #111827;
+  font-size: 32px;
+}
+
+.film-details--empty p {
+  color: #57534e;
+  font-size: 17px;
+}
+
+@media (max-width: 760px) {
+  .film-details__card {
+    grid-template-columns: 1fr;
+  }
+
+  .film-details__poster {
+    min-height: 0;
+    aspect-ratio: 2 / 3;
+  }
+
+  .film-details__info {
+    padding: 24px;
+  }
+
+  .film-details__title {
+    font-size: 30px;
+  }
+
+  .film-details__description {
+    font-size: 16px;
+  }
+}

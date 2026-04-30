@@ -1,1 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.5;
+  color: #111827;
+  background: #ffffff;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(100% - 32px, 1180px);
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  border: 1px solid #d8d2c8;
+  border-radius: 8px;
+  background: #e2b064;
+  color: #34312d;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  border-color: #c5bcae;
+  background: #eca128;
+  color: #111111;
+}
+
+.btn:active {
+  background: #db860f;
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgb(184 173 158 / 32%);
+  outline-offset: 2px;
+}
+
+.btn:disabled,
+.btn[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+.btn--secondary {
+  border-color: #d5d5d0;
+  background: #ffffff;
+  color: #4b4a45;
+}
+
+.btn--secondary:hover {
+  background: #f6f4f0;
+}
+
+.btn--secondary:active {
+  background: #eee9e1;
+}

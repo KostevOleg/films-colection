@@ -1,0 +1,23 @@
+@if(totalPages() > 1){
+  <nav class="pagination">
+    <button
+      class="pagination__btn btn btn--secondary"
+      type="button"
+      [disabled]="currentPage() === 1"
+      (click)="goToNewPage(currentPage()-1)"
+    >
+      prev
+    </button>
+      <span class="pagination__info">
+        Page {{ currentPage() }} of {{ totalPages() }}
+      </span>
+    <button
+      class="pagination__btn btn btn--secondary"
+      type="button"
+      [disabled]="currentPage() === totalPages()"
+      (click)="goToNewPage(currentPage() + 1)"
+    >
+      Next
+    </button>
+  </nav>
+}

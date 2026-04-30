@@ -1,0 +1,23 @@
+<section class="films">
+  <app-film-filters
+  [searchQuery]="searchQuery()"
+  [showOnlyFavorites]="showOnlyfavorites()"
+  [selectedGenre]="selectedGenre()"
+  [genres]="genres"
+  (searchChange)="onSearchChange($event)"
+  (favoriteChange)="onFavoriteChange($event)"
+  (genreChange)="onGenreChange($event)" />
+
+  @let films = paginatedFilms();
+  @if(!films.length){
+    <h3>No films with such parameters were found.</h3>
+  } @else {
+    <ul class="films__list">
+      @for(film of films; track film.id){
+        <app-film-card [routerLink]="['/film', film.id]"  (favoriteToggle)="onAddFavorite($event)" [film]="film"></app-film-card>
+      }
+    </ul>
+  }
+
+    <app-pagination (newPage)="onPageChange($event)" [totalPages]="totalPages()" [currentPage]="currentPage()"></app-pagination>
+</section>

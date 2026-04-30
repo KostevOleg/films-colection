@@ -1,0 +1,25 @@
+.films {
+  padding: 28px 0;
+}
+
+.films__search-form {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.films__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+
+.films__list app-film-card {
+  width: 220px;
+}
+
+@media (max-width: 560px) {
+  .films__list app-film-card {
+    width: 100%;
+  }
+}

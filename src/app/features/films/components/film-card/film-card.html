@@ -1,0 +1,14 @@
+  <div class="film-card" [class.isFavorite]="film().isFavorite" >
+    <img class="film-card__img" [src]="film().poster" alt="">
+    <h2 class="film-card__title">{{film().title}}</h2>
+    <p class="film-card__rating" >{{film().rating}}</p>
+    <p class="film-card__genre" >{{film().genre}}</p>
+    <p class="film-card__duration">{{film().duration | durationPipe}}</p>
+    <button
+      class="film-card__btn btn"
+      (click)="$event.stopPropagation(); addFavorite(film().id)"
+      type="button"
+    >
+      {{ film().isFavorite ? 'Delete from favorite' : 'Add to favorite' }}
+    </button>
+  </div>

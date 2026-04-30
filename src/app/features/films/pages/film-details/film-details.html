@@ -1,0 +1,56 @@
+<button  [routerLink]="['/']" class="film-details__back btn" type="button">
+  Back
+</button>
+@if (film(); as currentFilm) {
+  <section class="film-details">
+
+    <article class="film-details__card">
+      <img
+        class="film-details__poster"
+        [src]="currentFilm.poster"
+        [alt]="currentFilm.title"
+      >
+
+      <div class="film-details__info">
+        <div class="film-details__header">
+          <p class="film-details__id">ID: {{ currentFilm.id }}</p>
+          <span
+            class="film-details__favorite"
+            [class.film-details__favorite--active]="currentFilm.isFavorite"
+          >
+            {{ currentFilm.isFavorite ? 'Favorite' : 'Not favorite' }}
+          </span>
+        </div>
+
+        <h1 class="film-details__title">{{ currentFilm.title }}</h1>
+
+        <div class="film-details__facts">
+          <span>{{ currentFilm.year }}</span>
+          <span>{{ currentFilm.genre }}</span>
+          <span>{{ currentFilm.rating }} / 10</span>
+          <span>{{ currentFilm.duration | durationPipe }}</span>
+        </div>
+
+        <p class="film-details__description">
+          {{ currentFilm.description }}
+        </p>
+
+        <div class="film-details__fields">
+          <p><span>Poster:</span> {{ currentFilm.poster }}</p>
+          <p><span>Title:</span> {{ currentFilm.title }}</p>
+          <p><span>Year:</span> {{ currentFilm.year }}</p>
+          <p><span>Genre:</span> {{ currentFilm.genre }}</p>
+          <p><span>Rating:</span> {{ currentFilm.rating }}</p>
+          <p><span>Duration:</span> {{ currentFilm.duration | durationPipe }}</p>
+          <p><span>Description:</span> {{ currentFilm.description }}</p>
+        </div>
+        <button class="film-card__btn  btn" (click)="addFavorite(currentFilm.id)" type="button"> {{ currentFilm.isFavorite ? 'Delete from favorite' : 'Add to favorite' }}</button>
+      </div>
+    </article>
+  </section>
+} @else {
+  <section class="film-details film-details--empty">
+    <h1>Film not found</h1>
+    <p>The film you are looking for does not exist.</p>
+  </section>
+}
