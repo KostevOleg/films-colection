@@ -1,0 +1,1 @@
+import{wa as e}from"./chunk-ZZFH5ZOP.js";var o=class n{transform(t){let r=Math.floor(t/60),i=t%60;return r&&i?`${r}h ${i}min`:r?`${r}h`:`${i}min`}static \u0275fac=function(r){return new(r||n)};static \u0275pipe=e({name:"durationPipe",type:n,pure:!0})};export{o as a};
