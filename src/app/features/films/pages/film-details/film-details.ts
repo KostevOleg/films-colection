@@ -9,7 +9,6 @@ import { DurationPipe } from '../../../../shared/pipes/duration-pipe';
   selector: 'app-film-details',
   imports: [RouterLink, DurationPipe],
   templateUrl: './film-details.html',
-  standalone:true,
   styleUrl: './film-details.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,17 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
-import { FilmDetails } from './film-details';
+import { FilmDetailsComponent } from './film-details';
 
-describe('FilmDetails', () => {
-  let component: FilmDetails;
-  let fixture: ComponentFixture<FilmDetails>;
+describe('FilmDetailsComponent', () => {
+  let component: FilmDetailsComponent;
+  let fixture: ComponentFixture<FilmDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FilmDetails],
+      imports: [FilmDetailsComponent],
+      providers: [provideRouter([])],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(FilmDetails);
+    fixture = TestBed.createComponent(FilmDetailsComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

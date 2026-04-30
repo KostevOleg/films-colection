@@ -5,7 +5,6 @@ import { RouterLink } from '@angular/router';
   selector: 'app-not-found',
   imports: [RouterLink],
   templateUrl: './not-found.html',
-  standalone: true,
   styleUrl: './not-found.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

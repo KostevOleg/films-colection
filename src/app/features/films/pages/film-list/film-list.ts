@@ -10,7 +10,6 @@ import { FilmFiltersComponent } from '../../components/film-filters/film-filters
   selector: 'app-film-list',
   imports: [FilmCardComponent, RouterLink, PaginationComponent, FilmFiltersComponent],
   templateUrl: './film-list.html',
-  standalone: true,
   styleUrl: './film-list.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

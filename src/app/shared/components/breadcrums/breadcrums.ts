@@ -9,7 +9,6 @@ import { FilmsService } from '../../../core/services/films-service';
   selector: 'app-breadcrums',
   imports: [RouterLink],
   templateUrl: './breadcrums.html',
-  standalone: true,
   styleUrl: './breadcrums.scss',
    changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,17 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilmFilters } from './film-filters';
+import { FilmFiltersComponent } from './film-filters';
 
-describe('FilmFilters', () => {
-  let component: FilmFilters;
-  let fixture: ComponentFixture<FilmFilters>;
+describe('FilmFiltersComponent', () => {
+  let component: FilmFiltersComponent;
+  let fixture: ComponentFixture<FilmFiltersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FilmFilters],
+      imports: [FilmFiltersComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(FilmFilters);
+    fixture = TestBed.createComponent(FilmFiltersComponent);
+    fixture.componentRef.setInput('searchQuery', '');
+    fixture.componentRef.setInput('showOnlyFavorites', false);
+    fixture.componentRef.setInput('selectedGenre', '');
+    fixture.componentRef.setInput('genres', ['Drama']);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
